@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Drawing with SVG</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <style media="screen">
+      body{
+  background-color:#34495e;
+}
+
+#title{
+  position:absolute;
+  font-family:Roboto, sans-serif;
+  color:#ecf0f1;
+  width:100%;
+  text-align:center;
+  top:10%;
+  font-size:16pt;
+}
+/*
+#container {
+    width: 80%;
+    height: 500px;
+    padding: 20%;
+    flex: 1;
+}
+
+#container1 {
+    width: 20%;
+    padding-left: 10%;
+
+}
+
+#container2 {
+    width: 20%;
+    padding-right: 30%;
+    float: right;
+}
+*/
+
+ul {
+    width: 80%;
+    height: 500px;
+    padding: 20%;
+    flex: 1;
+    list-style-type: none;}
+
+li {
+   float: left;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="title" >
+      <p>Animated SVG Graphics</p>
+      <button onclick="drawapple()"><p>Apple</p></button>
+      <button onclick="draworange()"><p>Orange</p></button>
+    </div>
+
+<ul id="container">
+<li id="container1">
+  <svg id="apple" version="1.1"
+  	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
+  	 x="0px" y="0px" width="100%" height="80%" viewBox="0 0 30.1 30.2" enable-background="0 0 30.1 30.2"
+  	 xml:space="preserve">
+  <defs>
+  </defs>
+  <path id="apple" fill="none" stroke="#ecf0f1" stroke-width="1"  d=
+  "M17.5,6.4c4.1-2.6,2-4.7,2-4.7c-5.2,0.2-5.3,6.2-5.3,6.2c-0.1,1.2-1.4,0.7-1.4,0.7c-1.5-0.7-3.7-1.3-5.6-0.1   c-3.2,2-6.8,7.4-2.2,15s6.6,4,9.4,3.8c2.8-0.2,3.4,2,6.6,1.2c3.2-0.8,5.8-6.4,5.2-7.2c-0.8-1-4.4-2.6-4.5-5.5   c-0.2-3.4,0.8-3.4,3.3-5.2C26.4,9.8,20,6.4,15.9,9"/>
+  </svg>
+</div>
+
+<li id="container2">
+  <svg id="orange" version="1.1"
+  	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
+  	 x="0px" y="0px" width="100%" height="80%" viewBox="0 0 30.1 30.2" enable-background="0 0 30.1 30.2"
+  	 xml:space="preserve">
+  <defs>
+  </defs>
+  <path id="apple" fill="none" stroke="#ecf0f1" stroke-width="1"  d=
+  "M17.5,6.4c4.1-2.6,2-4.7,2-4.7c-5.2,0.2-5.3,6.2-5.3,6.2c-0.1,1.2-1.4,0.7-1.4,0.7c-1.5-0.7-3.7-1.3-5.6-0.1   c-3.2,2-6.8,7.4-2.2,15s6.6,4,9.4,3.8c2.8-0.2,3.4,2,6.6,1.2c3.2-0.8,5.8-6.4,5.2-7.2c-0.8-1-4.4-2.6-4.5-5.5   c-0.2-3.4,0.8-3.4,3.3-5.2C26.4,9.8,20,6.4,15.9,9"/>
+  </svg>
+</div>
+</div>
+<script src="https://cdn.jsdelivr.net/g/jquery@1.11.3,jquery.easing@1.3(jquery.easing.1.3.min.js)"></script>
+<script src="https://cdn.jsdelivr.net/jquery.drawsvg/1/jquery.drawsvg.min.js"></script>
+
+
+<!-- <script type="text/javascript" src="drawsvg.js"></script>-->
+
+<script>
+var $svg1 = $('#apple').drawsvg({
+  duration: 1000,
+  stagger: '100',
+  reverse: 'true'
+});
+function drawapple() {$svg1.drawsvg('animate');}
+
+var $svg2 = $('#orange').drawsvg({
+  duration: 1000,
+  stagger: '100',
+  reverse: 'true'
+});
+function draworange() {$svg2.drawsvg('animate');}
+
+
+</script>
+
+</body>
+</html>
